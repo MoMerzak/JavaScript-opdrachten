@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gebruikersinformatie</title>
+    <title>JavaScript en HTML Voorbeeld</title>
 </head>
 <body>
-    <script>
-        let gebruikersNaam = prompt("Wat is je naam?");
-        
-        alert("Hallo, " + gebruikersNaam + "!");
+    <h1 id="naam"></h1>
+    <p id="temperatuur"></p>
 
-        let toestemmingCookies = confirm("Mag ik cookies bewaren?");
-        
-        console.log("Toestemming voor cookies: " + (toestemmingCookies ? "Gegeven" : "Niet gegeven"));
+    <script>
+        const mijnNaam = "Mo";
+
+        console.log(mijnNaam);
+
+        document.getElementById("naam").innerText = "Naam: " + mijnNaam;
+
+        let huidigeTemperatuur = 20; 
+
+        alert("De temperatuur van vandaag is: " + huidigeTemperatuur + "°C");
+
+        document.getElementById("temperatuur").innerText = "Temperatuur: " + huidigeTemperatuur + "°C";
+
+        huidigeTemperatuur += 5;
+        console.log("Nieuwe temperatuur: " + huidigeTemperatuur + "°C"); 
+
+        document.getElementById("temperatuur").innerText = "Nieuwe temperatuur: " + huidigeTemperatuur + "°C";
     </script>
 </body>
 </html>
